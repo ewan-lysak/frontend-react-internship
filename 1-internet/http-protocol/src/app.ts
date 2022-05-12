@@ -2,13 +2,14 @@ import { createServer, Server, Socket } from "net";
 
 import { pipe } from "fp-ts/lib/function";
 import { error } from "fp-ts/lib/Console";
+import * as T from "fp-ts/lib/Task";
+import * as E from "fp-ts/lib/Either";
+import * as TE from "fp-ts/lib/TaskEither";
 import * as IO from "fp-ts/lib/IO";
 
 import { Config } from "./config";
 
-const getReqFromChunk = (chunk: Buffer): string => chunk.toString();
-
-const getReqHead = (req: string): string => req.split("\r\n")[0];
+const getHttpRequestHead = (req: string): string => req.split("\r\n")[0];
 
 const getResponse =
   (config: Config) =>
@@ -17,25 +18,33 @@ const getResponse =
       ? config.homeResponse
       : config.notFoundResponse;
 
-const sendReponse = (socket: Socket) => (response: string) => {
-  socket.write(response);
-  socket.end();
-};
+const sendReponse =
+  (socket: Socket) =>
+  (response: string): IO.IO<void> =>
+  () => {
+    socket.write(response);
+    socket.end();
+  };
 
-const handleConnection = (config: Config) => (socket: Socket) => {
-  socket.on("error", (err) => {
-    error(`err: ${err}`)();
-  });
+const promisifySocketRequest =
+  (socket: Socket): TE.TaskEither<Error, string> =>
+  () =>
+    new Promise((resolve, reject) => {
+      socket.on("error", (err) => pipe(err, E.left, reject));
+      socket.on("data", (chunk) => pipe(chunk.toString(), E.right, resolve));
+    });
 
-  socket.on("data", (chunk) =>
+const handleConnection =
+  (config: Config) =>
+  (socket: Socket): Promise<void> =>
     pipe(
-      getReqFromChunk(chunk),
-      getReqHead,
-      getResponse(config),
-      sendReponse(socket)
-    )
-  );
-};
+      TE.Do,
+      TE.chain(() => promisifySocketRequest(socket)),
+      TE.map(getHttpRequestHead),
+      TE.map(getResponse(config)),
+      TE.chain((response) => pipe(response, sendReponse(socket), TE.fromIO)),
+      TE.fold((err) => T.fromIO(error(`err: ${err}`)), T.of)
+    )();
 
 const listenServer =
   (port: number) =>
@@ -46,6 +55,6 @@ const listenServer =
 export const run = (config: Config): IO.IO<Server> =>
   pipe(
     handleConnection(config),
-    createServer as (connectionListener?: (socket: Socket) => void) => Server,
+    (connectionListener) => createServer(connectionListener),
     listenServer(4000)
   );
