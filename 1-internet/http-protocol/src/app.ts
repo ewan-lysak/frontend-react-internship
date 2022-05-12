@@ -10,10 +10,12 @@ const getReqFromChunk = (chunk: Buffer): string => chunk.toString();
 
 const getReqHead = (req: string): string => req.split("\r\n")[0];
 
-const getResponse = (config: Config) => (reqHead: string) =>
-  reqHead === config.homeRequestHead
-    ? config.homeResponse
-    : config.notFoundResponse;
+const getResponse =
+  (config: Config) =>
+  (reqHead: string): string =>
+    reqHead === config.homeRequestHead
+      ? config.homeResponse
+      : config.notFoundResponse;
 
 const sendReponse = (socket: Socket) => (response: string) => {
   socket.write(response);
