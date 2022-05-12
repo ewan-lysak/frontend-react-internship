@@ -18,7 +18,7 @@ const main = pipe(
       pipe(
         O.fromNullable(server.address()),
         O.fold(
-          () => `http server is running`,
+          () => "http server is running",
           (serverAddress) =>
             isString(serverAddress)
               ? `http server is running on address ${serverAddress}`
