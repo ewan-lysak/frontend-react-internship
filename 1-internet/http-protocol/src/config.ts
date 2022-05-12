@@ -14,9 +14,10 @@ export type Config = {
 const getFileContents = (path: string): TE.TaskEither<Error, string> =>
   TE.tryCatch(() => readFile(path, "utf-8"), E.toError);
 
-export const getConfigFromJson = () =>
+export const getConfigFromJson = (path: string) =>
   pipe(
-    getFileContents("./config.json"),
+    TE.Do,
+    TE.chain(() => getFileContents(path)),
     TE.chain((contents) =>
       TE.fromEither(J.parse(contents) as E.Either<unknown, Config>)
     )
