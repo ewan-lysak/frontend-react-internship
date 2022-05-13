@@ -1,11 +1,13 @@
 import { createServer, Server, Socket } from "net";
 
 import { pipe } from "fp-ts/lib/function";
-import { error } from "fp-ts/lib/Console";
+import { error, info } from "fp-ts/lib/Console";
+import { isString } from "fp-ts/lib/string";
 import * as T from "fp-ts/lib/Task";
 import * as E from "fp-ts/lib/Either";
 import * as TE from "fp-ts/lib/TaskEither";
 import * as IO from "fp-ts/lib/IO";
+import * as O from "fp-ts/lib/Option";
 
 import { Config } from "./config";
 
@@ -52,9 +54,22 @@ const listenServer =
   () =>
     server.listen(port);
 
-export const run = (config: Config): IO.IO<Server> =>
+export const run = (config: Config): IO.IO<void> =>
   pipe(
     handleConnection(config),
     (connectionListener) => createServer(connectionListener),
-    listenServer(4000)
+    listenServer(4000),
+    IO.chain((server) =>
+      pipe(
+        O.fromNullable(server.address()),
+        O.fold(
+          () => "http server is running",
+          (serverAddress) =>
+            isString(serverAddress)
+              ? `http server is running on address ${serverAddress}`
+              : `http server is running on port ${serverAddress.port}`
+        ),
+        info
+      )
+    )
   );
