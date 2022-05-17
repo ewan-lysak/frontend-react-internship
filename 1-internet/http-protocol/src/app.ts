@@ -54,10 +54,14 @@ const listenServer =
   () =>
     server.listen(port);
 
+type CreateServerFn = (
+  connectionListener: (socket: Socket) => Promise<void>
+) => Server;
+
 export const run = (config: Config): IO.IO<void> =>
   pipe(
     handleConnection(config),
-    (connectionListener) => createServer(connectionListener),
+    createServer as CreateServerFn,
     listenServer(4000),
     IO.chain((server) =>
       pipe(
