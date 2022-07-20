@@ -1,0 +1,494 @@
+/* Section-fon-card*/
+.section-fon-card {
+    background-image: url("../assets/images/fon.jpg");
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.card-info {
+    background-color: white;
+}
+
+.info {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #626262;
+}
+
+.btn-in-card-info {
+    background-color: #262626;
+    color: white;
+    width: 97px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+}
+
+.text-in-btn-in-card-info {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+
+
+
+@media screen and (min-width: 1123px) {
+    .section-fon-card {
+        height: 364px;
+    }
+
+    .card-info {
+        width: 389px;
+        height: 204px;
+    }
+
+    .wrapper-card-info {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .name-of-rest {
+        font-family: Roboto;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 42px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .card-info-inner {
+        padding-left: 38px;
+        padding-top: 38px;
+        padding-right: 38px;
+    }
+
+    .info-and-btn {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 62px;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+
+    .section-fon-card {
+        height: 364px;
+    }
+
+    .card-info {
+        width: 432px;
+        height: 204px;
+    }
+
+    .wrapper-card-info {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .name-of-rest {
+        font-family: Roboto;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 42px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .card-info-inner {
+        padding-left: 48px;
+        padding-top: 38px;
+        padding-right: 68px;
+    }
+
+    .info-and-btn {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 62px;
+        align-items: center;
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .section-fon-card {
+        height: 264px;
+    }
+
+    .card-info {
+        width: 100%;
+        height: 180px;
+        box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
+    }
+
+    .wrapper-card-info {
+        padding-top: 131px;
+    }
+
+    .name-of-rest {
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .card-info-inner {
+        padding-top: 24px;
+    }
+
+    .info-and-btn {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-in-card-info {
+        margin-top: 16px;
+    }
+
+}
+
+
+
+/* Tab*/
+.tab {
+    padding-top: 32px;
+    padding-bottom: 29px;
+    border-bottom: 1px solid #75757533
+}
+
+.tab-wrapper {
+    display: flex;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #626262;
+}
+
+.tab-inner {
+    margin: 0px;
+    margin-right: 40px;
+}
+
+.tab-inner-1 {
+    margin: 0px;
+    margin-right: 40px;
+    color: #327430;
+}
+
+.tab-inner:hover {
+    color: #327430;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .tab {
+        display: none;
+    }
+
+
+
+    .tab {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
+}
+
+
+
+
+
+/*Section-food*/
+
+.section-card {
+    margin-top: 56px;
+}
+
+.dishes {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1D1D1D;
+    margin-bottom: 32px;
+}
+
+
+.dishes-small {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.line {
+
+    height: 1px;
+    background-color: #262626;
+    width: 54px;
+    margin: 0 auto 43px auto;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 1px solid #75757533;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    margin-bottom: 40px;
+}
+
+.card-food-inner-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    background-color: rgba(117, 117, 117, 0.04);
+}
+
+.wrapper-text {
+    padding-left: 16px;
+}
+
+
+
+
+
+.composition {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #626262;
+}
+
+
+
+.col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+
+
+@media screen and (min-width: 1123px) {
+
+    .dishes-small {
+        display: none;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .section-card {
+        margin-bottom: 40px;
+    }
+
+
+    .name {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .card {
+        height: 160px;
+        margin-right: 16px;
+    }
+
+    .price {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 70px;
+    }
+
+    .price-1 {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+    .dishes-small {
+        display: none;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .section-card {
+        margin-bottom: 16px;
+    }
+
+    .name {
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .card {
+        width: 752px;
+        height: 160px;
+        margin-bottom: 32px;
+    }
+
+    .price {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 70px;
+    }
+
+    .price-1 {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .card {
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+
+
+
+    .dishes {
+        display: none;
+    }
+
+    .dishes-small {
+        padding-top: 56px;
+    }
+
+    .name {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .price {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 35px;
+    }
+
+    .price-1 {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+
+
+    .card-text-inner-1 {
+        max-width: 190px;
+    }
+
+    .section-card {
+        margin-bottom: 8px;
+    }
+
+    .card {
+        height: 102px;
+        margin-bottom: 16px;
+    }
+
+    .card-pic-id {
+
+        height: 102px;
+    }
+
+
+}
