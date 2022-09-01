@@ -8,6 +8,18 @@
     margin-right: auto;
 }
 
+.button {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 12px;
+    height: 64px;
+    width: 205px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    border: none;
+}
+
 .header {
     height: 85px;
     display: flex;
@@ -19,16 +31,20 @@
     height: 26px;
 }
 
-.header__text-wrapper {
+.nav {
     display: flex;
     gap: 65px;
     margin-left: 267px;
     margin-right: 278px;
+}
+
+.header__text {
     font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     color: #555248;
+    text-decoration: none;
 }
 
 .promo {
@@ -82,15 +98,6 @@
 
 .promo__button {
     background-color: #444240;
-    color: white;
-    height: 64px;
-    width: 205px;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 0.05em;
-    border: none;
     margin-top: 64px;
 }
 
@@ -116,7 +123,7 @@
 .promo__watch {
     position: absolute;
     right: 420px;
-    top: 74px;
+    top: 92px;
 }
 
 .promo__d {
@@ -143,7 +150,7 @@
     margin-top: 76px;
 }
 
-.popular__zag {
+.zag {
     font-family: Playfair Display;
     font-size: 32px;
     font-weight: 400;
@@ -272,14 +279,7 @@
 }
 
 .quality__zag {
-    font-family: Playfair Display;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 43px;
-    letter-spacing: 0em;
     text-align: left;
-    color: #1B1A17;
-
 }
 
 .quality__text {
@@ -296,16 +296,7 @@
 }
 
 .quality__button {
-    height: 64px;
-    width: 205px;
-    color: #FFFFFF;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 14px;
-    letter-spacing: 0.05em;
     background-color: #D4B098;
-    border: none;
 }
 
 
@@ -325,20 +316,13 @@
     gap: 71px;
 }
 
-.news__col-1 {
+.news__card {
     margin-top: 221px;
     margin-bottom: 152px;
 }
 
 .news__podzag {
-    margin-bottom: 40px;
-    font-family: Playfair Display;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 43px;
-    letter-spacing: 0em;
     text-align: left;
-
 }
 
 .news__text {
@@ -358,7 +342,7 @@
     gap: 18px;
 }
 
-.news__col-2 {
+.news__images {
     margin-top: 81px;
     display: flex;
     gap: 10px;
@@ -422,4 +406,5 @@
     line-height: 14px;
     letter-spacing: 0em;
     text-align: left;
+    text-decoration: none;
 }
