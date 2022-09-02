@@ -3,7 +3,7 @@
 }
 
 .container {
-    max-width: 1126px;
+    max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -123,7 +123,7 @@
 .promo__watch {
     position: absolute;
     right: 420px;
-    top: 92px;
+    top: 74px;
 }
 
 .promo__d {
@@ -312,8 +312,9 @@
 }
 
 .news {
-    display: flex;
-    gap: 71px;
+    display: grid;
+    grid-template-columns: 471px 228px 350px;
+    gap: 71px 22px;
 }
 
 .news__card {
@@ -342,31 +343,32 @@
     gap: 18px;
 }
 
-.news__images {
-    margin-top: 81px;
-    display: flex;
-    gap: 10px;
+.small-photo-1 {
+    margin-bottom: 6px;
 }
 
-.news__small-img {
-    width: 242px;
-}
 
-.news__img-big-watch {
-    margin-top: 6px;
-}
+
+
+
 
 .news__img {
     height: 460px;
+    margin-top: 81px;
+    display: block;
+    gap: 10px;
 }
 
 .footer {
     background-color: #444240;
+    display: flex;
+    align-items: center;
 }
 
 .footer__wrapper {
     display: flex;
-    gap: 118px;
+    column-gap: 171px;
+
 }
 
 
