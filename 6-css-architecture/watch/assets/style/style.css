@@ -1,5 +1,16 @@
+/* <----global------> */
 * {
     margin: 0;
+}
+
+.subtitle {
+    font-family: Playfair Display;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 52px;
 }
 
 .container {
@@ -20,6 +31,7 @@
     border: none;
 }
 
+/* <----header------> */
 .header {
     height: 85px;
     display: flex;
@@ -47,6 +59,7 @@
     text-decoration: none;
 }
 
+/* <----promo------> */
 .promo {
     display: flex;
 }
@@ -150,15 +163,7 @@
     margin-top: 76px;
 }
 
-.subtitle {
-    font-family: Playfair Display;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 43px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 52px;
-}
+/* <----popular------> */
 
 .popular__view-all {
     font-family: Roboto;
@@ -257,6 +262,7 @@
     filter: drop-shadow(1px 1px 3px #F7F5EF);
 }
 
+/* <----quality------> */
 .quality {
     background-color: #F7F5EF, #FDFDFB;
     overflow: hidden;
@@ -311,6 +317,7 @@
     border: 1px solid #D4B098;
 }
 
+/* <----news------> */
 .news {
     display: grid;
     grid-template-columns: 471px 228px 350px;
@@ -371,7 +378,7 @@
 
 }
 
-
+/* <----footer------> */
 
 .footer__logo {
     margin-bottom: 14px;
