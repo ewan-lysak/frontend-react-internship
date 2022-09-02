@@ -64,7 +64,7 @@
     margin-top: 236px;
 }
 
-.promo__zag {
+.promo__title {
     font-family: Playfair Display;
     font-size: 45px;
     font-weight: 400;
@@ -74,7 +74,7 @@
 
 }
 
-.promo__podzag {
+.promo__subtitle {
     font-family: Playfair Display;
     font-size: 30px;
     font-weight: 400;
@@ -150,7 +150,7 @@
     margin-top: 76px;
 }
 
-.zag {
+.subtitle {
     font-family: Playfair Display;
     font-size: 32px;
     font-weight: 400;
@@ -278,7 +278,7 @@
     margin-top: 140px;
 }
 
-.quality__zag {
+.quality__subtitle {
     text-align: left;
 }
 
@@ -322,7 +322,7 @@
     margin-bottom: 152px;
 }
 
-.news__podzag {
+.news__subtitle {
     text-align: left;
 }
 
@@ -389,7 +389,7 @@
     margin-top: 67px;
 }
 
-.footer__podzag {
+.footer__subtitle {
     color: #FFFFFF;
     font-family: Roboto;
     font-size: 14px;
