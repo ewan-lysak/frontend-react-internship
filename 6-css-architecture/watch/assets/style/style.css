@@ -31,7 +31,7 @@
     height: 26px;
 }
 
-.nav {
+.header__nav {
     display: flex;
     gap: 65px;
     margin-left: 267px;
@@ -51,7 +51,7 @@
     display: flex;
 }
 
-.hr-1 {
+.promo__hr-subtitle {
     width: 50px;
     height: 0px;
     position: relative;
@@ -112,7 +112,7 @@
     letter-spacing: 0em;
 }
 
-.hr-2 {
+.promo__hr-price {
     width: 50px;
     height: 0px;
     position: absolute;
@@ -138,7 +138,7 @@
 }
 
 
-.hr-3 {
+.promo__hr-d {
     position: absolute;
     top: 645px;
     right: 500px;
@@ -174,7 +174,7 @@
 
 }
 
-.popular__hr-1 {
+.popular__hr-view-all {
     position: absolute;
     right: 370px;
     top: 1000px;
