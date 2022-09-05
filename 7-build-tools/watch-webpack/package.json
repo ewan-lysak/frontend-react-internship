@@ -2,9 +2,9 @@
   "name": "watch-webpack",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "dev": "webpack --mode development"
   },
   "devDependencies": {
     "-": "^0.0.1",
