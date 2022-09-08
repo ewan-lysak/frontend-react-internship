@@ -1,9 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CopyWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+
   mode: 'development',
-  entry: './src/assets/js/index.js',
+  entry: {
+    main: './src/js/index.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -35,13 +39,9 @@ module.exports = {
     }
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/template/pages/index.pug",
+    new HtmlWebpackPlugin({
+      template: "index.html",
       filename: "./index.html"
     }),
-    new CopyWebpackPlugin([
-      { from: './src/assets/images', to: './assets/images' },
-      { from: './src/assets/icons', to: './assets/fonts' },
-    ])
   ]
 };     

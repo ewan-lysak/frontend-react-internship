@@ -1,2 +1,2 @@
 
-import `./watch/assets/style/style.css`;
+import '../style/style.css';
