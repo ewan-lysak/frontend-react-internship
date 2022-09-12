@@ -10,15 +10,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    clean: true,
   },
   devServer: {
     compress: true,
     port: 9000,
-    open: ['http://localhost:9000/'],
+    open: true,
   },
   module: {
     rules: [
-
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
